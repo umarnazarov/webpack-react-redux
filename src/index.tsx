@@ -6,7 +6,7 @@ import { router } from "./routes";
 import { setupStore } from "./redux/store";
 const store = setupStore();
 
-import "./styles/styles.scss";
+import "./scss/main.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

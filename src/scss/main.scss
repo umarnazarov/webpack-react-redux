@@ -1,0 +1,9 @@
+@use "./abstracts" as *;
+
+* {
+    @each $color, $types in $colors {
+        @each $shade, $value in $types {
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+}
