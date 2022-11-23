@@ -21,3 +21,17 @@
     justify-content: center;
     align-items: center;
 }
+
+
+@mixin font-face($font-family, $font-path, $font-file, $font-weight: normal, $font-style: normal ) {
+  @font-face {
+    font-family: $font-family;
+    src: url(  $font-path + $font-file + '.eot' );
+    src: url( $font-path + $font-file + '.eot?#iefix') format('embedded-opentype'),
+    url( $font-path + $font-file + '.woff') format('woff'),
+    url( $font-path + $font-file + '.ttf') format('truetype'),
+    url( $font-path + $font-file + '.svg#{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
