@@ -7,3 +7,15 @@
         }
     }
 }
+
+$font-path: '../fonts/' !default;
+@each $font-types, $font-variants in $font-faces {
+  @each $variant in $font-variants {
+    $font-path: $font-path !global;
+    $font-family: nth($variant, 1);
+    $font-weight: nth($variant, 2);
+    $font-style: nth($variant, 3);
+
+    @include font-face($font-family, $font-path, $font-family, $font-weight, $font-style);
+  }
+}
